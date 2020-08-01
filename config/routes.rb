@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :admins
-  devise_for :customers
+  devise_for :admin
+  devise_for :customer
     namespace :admin do
   	get '/' => "home#top"
   	resources :products,only: [:index,:new,:create,:show,:edit,:update]
